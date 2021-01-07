@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="LogicEvent.SuspensUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LogicEvent"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400">
+
+    <Border CornerRadius="15" BorderThickness="5" BorderBrush="black" Background="white">
+        <Grid Width="auto" Height="auto"  Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="5*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="1" BorderThickness="0" Background="white">
+                <TextBlock Text="Ajouter aux favoris" Style="{StaticResource Style_Titre}"/>
+            </Button>
+            <Image Source="../images/favoris.png"/>
+
+            <Button Grid.Column="1" Grid.Row="1" BorderThickness="0" Background="white">
+                <TextBlock Text="Reserver sa place" 
+                           Style="{StaticResource Style_Titre}"/>
+            </Button>
+            <Image Source="../images/billetterie.png" Grid.Row="1"/>
+
+        </Grid>
+    </Border>
+</UserControl>

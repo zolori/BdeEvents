@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="LogicEvent.DetailsTache"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LogicEvent"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Border Background="AntiqueWhite" BorderThickness="3" BorderBrush="Black" Margin="0,10,5,0">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="txtBlock_tache" Text="{Binding NomT}" Style="{StaticResource Style_Titre}" TextAlignment="Center"/>
+            <ScrollViewer x:Name="txtBlock_tache2" Margin="0,50,0,10" VerticalScrollBarVisibility="Auto">
+                <Viewbox>
+                    <StackPanel Orientation="Vertical" Width="400">
+                        <TextBlock FontSize="12" TextWrapping="Wrap" Foreground="Black" Text="{Binding DescriptionT}"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                    </StackPanel>
+                </Viewbox>
+            </ScrollViewer>
+            <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button  BorderThickness="0" Background="AntiqueWhite" Click="Button_Supprimer">
+
+                    <Image Source="../images/supprimer.png" Height="40"/>
+                </Button>
+                <Button BorderThickness="0" Background="Transparent" Click="Button_Click">
+                    <Image Source="../images/modifier.png" Height="40"/>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>
